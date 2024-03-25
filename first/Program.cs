@@ -1,7 +1,7 @@
-﻿Console.WriteLine("Введи, пожалуйста, свое имя:");
-string user = Console.ReadLine();
-Console.WriteLine("Hello, " + user + "!");
-Console.ReadLine();
+﻿//Console.WriteLine("Введи, пожалуйста, свое имя:");
+//string user = Console.ReadLine();
+//Console.WriteLine("Hello, " + user + "!");
+//Console.ReadLine();
 
 
 // Задача 1
@@ -29,7 +29,7 @@ switch (sign)
         Console.Write($"Результат умножения: {result}");
         break;
     case '/':
-        if (operand1 == 0 || operand2 == 0)
+        if (operand2 == 0)
         {
             Console.Write("Ошибка! Деление на ноль.");
         }
@@ -43,11 +43,12 @@ switch (sign)
         result = operand1 % operand2;
         Console.Write($"Остаток от деления: {result}");
         break;
+    default:
+        Console.Write("Некорректный ввод данных!");
+        break;
 }
 
 // Задача 2
-
-using System.Text;
 
 Console.Write("Введите, пожалуйста, целое число от 0 до 100: ");
 int number = Convert.ToInt32(Console.ReadLine());
@@ -126,6 +127,49 @@ switch (pogoda)
         break;
 }
 
+// Второй вариант
+
+Console.Write("Введите, пожалуйста, слово о погоде на русском языке: ");
+string pogoda = Console.ReadLine().ToLower();
+
+switch (pogoda)
+{
+    case "холодно":
+        Console.Write("В переводе на английский язык, это будет: cold");
+        break;
+    case "тепло":
+        Console.Write("В переводе на английский язык, это будет: warm");
+        break;
+    case "ветрено":
+        Console.Write("В переводе на английский язык, это будет: windy");
+        break;
+    case "дождливо":
+        Console.Write("В переводе на английский язык, это будет: rainy");
+        break;
+    case "солнечно":
+        Console.Write("В переводе на английский язык, это будет: sunny");
+        break;
+    case "пасмурно":
+        Console.Write("В переводе на английский язык, это будет: cloudy");
+        break;
+    case "гроза":
+        Console.Write("В переводе на английский язык, это будет: storm");
+        break;
+    case "ураган":
+        Console.Write("В переводе на английский язык, это будет: hurricane");
+        break;
+    case "жара":
+        Console.Write("В переводе на английский язык, это будет: heat");
+        break;
+    case "снежно":
+        Console.Write("В переводе на английский язык, это будет: snowy");
+        break;
+    default:
+        Console.Write("Извините, такого слова нет");
+        break;
+}
+
+
 // Задача 4
 
 Console.Write("Введите, пожалуйста, целое число: ");
@@ -140,18 +184,48 @@ else
     Console.WriteLine("Ваше число нечетное");
 }
 
-// второй способ сама не придумала. Думала, что можно придумать с делением на 2, но не знаю как это в коде обозначить, делится число без остатка или нет.
-// нашла либо замудреные варианта, либо с помощью побитого умножения/побитовое И. Но мне очень поверхностно это понятно, да и оно не сработало.
+//// пыталась по разному вычислить, в соответствии с комментарием, не получается у меня
+
 
 
 Console.Write("Введите, пожалуйста, целое число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+double number1 = Convert.ToDouble(Console.ReadLine());
+int result1 = (int)(number1 / 2);
 
-if (number & 1 == 0)
+if (result1 != 0)
+{
+    Console.WriteLine("Ваше число нечетное");
+}
+else
+{
+    Console.WriteLine("Ваше число четное");
+
+}
+
+Console.Write("Введите, пожалуйста, целое число: ");
+double number2 = Convert.ToDouble(Console.ReadLine());
+double result2 = number2 / 2;
+
+if (Convert.ToInt32(result2) != 0)
+{
+    Console.WriteLine("Ваше число нечетное");
+}
+else
+{
+    Console.WriteLine("Ваше число четное");
+
+}
+
+Console.Write("Введите, пожалуйста, целое число: ");
+double number3 = Convert.ToDouble(Console.ReadLine());
+double number4 = number3 - Math.Truncate(number3);
+
+if ((Convert.ToInt32(number4 * 10)) % 2 == 0)
 {
     Console.WriteLine("Ваше число четное");
 }
 else
 {
     Console.WriteLine("Ваше число нечетное");
+
 }
