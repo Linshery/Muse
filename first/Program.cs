@@ -396,19 +396,22 @@
 
 // 1 задание
 
+using System.Text;
+
 var phrase = "testtest123";
 phrase = phrase.Replace("test", "testing");
 
-string result = "";
+StringBuilder sb = new StringBuilder(phrase);
 
 foreach (char c in phrase)
 {
     if (!Char.IsDigit(c))
     {
-        result += c;
+        sb.Append(c);
     }
-    Console.WriteLine(result);
 }
+string resultPhrase = sb.ToString();
+Console.WriteLine(resultPhrase);
 
 
 
