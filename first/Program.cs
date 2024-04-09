@@ -230,169 +230,169 @@
 
 //}
 
-// Массивы и циклы
+//Массивы и циклы
 
 // Задание 1
 
 
-//int[] array = new int[] { 1, 2, 3, 4, 5 };
+int[] array = new int[] { 1, 2, 3, 4, 5 };
 
-//Console.WriteLine("Введите число: ");
-//int number = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число: ");
+int number = int.Parse(Console.ReadLine());
 
-//bool found = false;
+bool found = false;
 
-//foreach (int n in array)
-//{
-//    if (n == number)
-//    {
-//        found = true;
-//        break;
-//    }
-//}
-//if (found)
-//{
-//    Console.WriteLine("Число найдено в массиве.");
-//}
-//else
-//{
-//    Console.WriteLine("Число не найдено в массиве.");
-//}
+foreach (int n in array)
+{
+    if (n == number)
+    {
+        found = true;
+        break;
+    }
+}
+if (found)
+{
+    Console.WriteLine("Число найдено в массиве.");
+}
+else
+{
+    Console.WriteLine("Число не найдено в массиве.");
+}
 
 
-// Задание 2
+//Задание 2
 
-//int[] array = new int[] { 1, 2, 2, 4, 5 };
-//Console.WriteLine("Массив: " + string.Join(",", array));
+int[] array = new int[] { 1, 2, 2, 4, 5 };
+Console.WriteLine("Массив: " + string.Join(",", array));
 
-//Console.WriteLine("Введите число для удаления:");
-//int numberToDelete = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите число для удаления:");
+int numberToDelete = int.Parse(Console.ReadLine());
 
-//int result = 0;
-//foreach (int n in array)
-//{
-//    if (n == numberToDelete)
-//    {
-//        result++;
-//    }
-//}
+int result = 0;
+foreach (int n in array)
+{
+    if (n == numberToDelete)
+    {
+        result++;
+    }
+}
 
-//if (result == 0)
-//{
-//    Console.WriteLine("Такого числа нет в массиве");
-//}
-//else
-//{
-//    int[] array2 = new int[array.Length - result];
-//    int index = 0;
-//    foreach (int n in array)
-//    {
-//        if (n != numberToDelete)
-//        {
-//            array2[index] = n;
-//            index++;
-//        }
-//    }
+if (result == 0)
+{
+    Console.WriteLine("Такого числа нет в массиве");
+}
+else
+{
+    int[] array2 = new int[array.Length - result];
+    int index = 0;
+    foreach (int n in array)
+    {
+        if (n != numberToDelete)
+        {
+            array2[index] = n;
+            index++;
+        }
+    }
 
-//    Console.Write("Новый массив: ");
-//    foreach (int n in array2)
-//    {
-//        Console.Write(n + " ");
-//    }
-//}
+    Console.Write("Новый массив: ");
+    foreach (int n in array2)
+    {
+        Console.Write(n + " ");
+    }
+}
 
-// Задание 3
+//Задание 3
 
-//using System.Drawing;
+using System.Drawing;
 
-//Console.WriteLine("Введите длину массива:");
-//int length = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите длину массива:");
+int length = int.Parse(Console.ReadLine());
 
-//int[] array = new int[length];
+int[] array = new int[length];
 
-//for (int i = 0; i < length; i++)
-//{
-//    array[i] = Random.Shared.Next(1, 11);
-//}
+for (int i = 0; i < length; i++)
+{
+    array[i] = Random.Shared.Next(1, 11);
+}
 
-//Console.WriteLine("Получившийся массив: " + string.Join(",", array));
+Console.WriteLine("Получившийся массив: " + string.Join(",", array));
 
-//int max = array[0];
+int max = array[0];
 
-//for (int i = 1; i < length; i++)
-//{
-//    if (max < array[i])
-//    {
-//        max = array[i];
-//    }
-//}
+for (int i = 1; i < length; i++)
+{
+    if (max < array[i])
+    {
+        max = array[i];
+    }
+}
 
-//int min = array[0];
+int min = array[0];
 
-//for (int i = 1; i < length; i++)
-//{
-//    if (min > array[i])
-//    {
-//        min = array[i];
-//    }
-//}
+for (int i = 1; i < length; i++)
+{
+    if (min > array[i])
+    {
+        min = array[i];
+    }
+}
 
-//double sum = 0;
-//foreach (int n in array)
-//{
-//    if (n > max)
-//        max = n;
+double sum = 0;
+foreach (int n in array)
+{
+    if (n > max)
+        max = n;
 
-//    if (n < min)
-//        min = n;
+    if (n < min)
+        min = n;
 
-//    sum += n;
-//}
+    sum += n;
+}
 
-//double average = sum / length;
+double average = sum / length;
 
-//Console.WriteLine("Максимальное значение в массиве: " + max);
-//Console.WriteLine("Минимальное значение в массиве: " + min);
-//Console.WriteLine("Среднее значение в массиве: " + average);
+Console.WriteLine("Максимальное значение в массиве: " + max);
+Console.WriteLine("Минимальное значение в массиве: " + min);
+Console.WriteLine("Среднее значение в массиве: " + average);
 
 
 //Задание 4
 
-//int[] array1 = { 1, 2, 3, 4, 5 };
-//int[] array2 = { 1, 2, 3, 4, 5 };
+int[] array1 = { 1, 2, 3, 4, 5 };
+int[] array2 = { 1, 2, 3, 4, 5 };
 
-//Console.WriteLine("Первый массив: " + string.Join(",", array1));
-//Console.WriteLine("Второй массив: " + string.Join(",", array2));
+Console.WriteLine("Первый массив: " + string.Join(",", array1));
+Console.WriteLine("Второй массив: " + string.Join(",", array2));
 
-//double sum1 = 0;
-//double sum2 = 0;
+double sum1 = 0;
+double sum2 = 0;
 
-//foreach (int i in array1)
-//{
-//    sum1 += i;
-//}
-//foreach (int i in array2)
-//{
-//    sum2 += i;
-//}
+foreach (int i in array1)
+{
+    sum1 += i;
+}
+foreach (int i in array2)
+{
+    sum2 += i;
+}
 
-//double average1 = sum1 / array1.Length;
-//double average2 = sum2 / array2.Length;
+double average1 = sum1 / array1.Length;
+double average2 = sum2 / array2.Length;
 
-//if (average1 > average2)
-//{
-//    Console.WriteLine("В первом массиве среднее арифетическое больше чем во втором массиве");
-//}
-//else if (average1 < average2)
-//{
-//    Console.WriteLine("Во втором массиве среднее арифетическое больше чем в первом массиве");
-//}
-//else
-//{
-//    Console.WriteLine("Среднее арифметическое двух массивов равны");
-//}
+if (average1 > average2)
+{
+    Console.WriteLine("В первом массиве среднее арифетическое больше чем во втором массиве");
+}
+else if (average1 < average2)
+{
+    Console.WriteLine("Во втором массиве среднее арифетическое больше чем в первом массиве");
+}
+else
+{
+    Console.WriteLine("Среднее арифметическое двух массивов равны");
+}
 
-// Строки
+//Строки
 
 // 1 задание
 
@@ -401,7 +401,7 @@ using System.Text;
 var phrase = "testtest123";
 phrase = phrase.Replace("test", "testing");
 
-StringBuilder sb = new StringBuilder(phrase);
+StringBuilder sb = new StringBuilder();
 
 foreach (char c in phrase)
 {
@@ -414,27 +414,36 @@ string resultPhrase = sb.ToString();
 Console.WriteLine(resultPhrase);
 
 
-
 //2 задание
 
-//Console.WriteLine(String.Concat("\"Welcome\" \"to\" \"the\" \"TMS\" \"lessons.\""));
+Console.WriteLine(String.Concat("\"Welcome\" \"to\" \"the\" \"TMS\" \"lessons.\""));
 
 
 //3 задание
 
-//var t1 = "teamwithsomeofexcersicesabcwanttomakeitbetter";
-//string subString = "abc";
+using static System.Net.Mime.MediaTypeNames;
 
-//string[] words = t1.Split(new char[] { 'a' });
+var text = "teamwithsomeofexcersicesabcwanttomakeitbetter";
 
-//Console.WriteLine(subString);
+string beforeAbc = text.Split(new string[] { "abc" }, StringSplitOptions.RemoveEmptyEntries)[0];
+string afterAbc = text.Split(new string[] { "abc" }, StringSplitOptions.RemoveEmptyEntries)[1];
+Console.WriteLine("Перед abc: " + beforeAbc);
+Console.WriteLine("После abc: " + afterAbc);
+
+
 
 //задание 4
 
-//string text = "Плохой день";
-//text = text.Substring(7);
-//Console.WriteLine(text);
+string text = "Плохой день";
+text = text.Substring(7);
 
-//string substring = ()
+string subString = "Хороший ";
+text = text.Insert(0, subString);
+text = text.Insert(text.Length, "!!!!!!!!!");
 
+text = text.Substring(0, text.Length - 1);
+text = text.Insert(text.Length, "?");
+Console.WriteLine(text);
+
+//5 задание очень большое, если успею сделаю его позже
 
